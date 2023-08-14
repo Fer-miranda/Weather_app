@@ -14,7 +14,7 @@ const Weather = () => {
 
     useEffect(() => {
         const fetchWeather = async () => {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=43e7673569911f16f2b63821ef9b354d
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid={token}
             `);
             if (componentMounted) {
                 setData(await response.json());
